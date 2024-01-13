@@ -1,22 +1,40 @@
 package pl.edu.wszib.repository;
 
 import lombok.Getter;
-import lombok.Setter;
+import lombok.NoArgsConstructor;
 import pl.edu.wszib.model.Book;
 
-import java.time.LocalDate;
-@Getter @Setter
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+@Getter
+@NoArgsConstructor
 public class BookRepository {
-    private final Book[] books = new Book[5];
-    public BookRepository() {
-        Book a = new Book(
-                "Ogniem i Mieczem", "Henryk Sienkiewicz", "978-83-732-7157-9", "Aleksander",
-                LocalDate.of(2024, 1, 6), LocalDate.of(2024, 2, 21));
-        Book b = new Book(
-                "Krzyżacy", "Henryk Sienkiewicz", "978-83-774-0824-7", "Zbigniew",
-                LocalDate.of(2024, 1, 1), LocalDate.of(2024, 3, 13));
+    private final List<Book> books = new ArrayList<>();
+
+    public Optional<Book> findByIsbn(String isbn) {
+        return books.stream()
+                .filter(book -> book.getIsbn().equals(isbn))
+                .findFirst();
     }
-//    public boolean isBorrowed(String isbn) {
-//
-//    }
+
+    public List<Book> findByTitleOrAuthor(String query) {
+        return books.stream()
+                .filter(book -> book.getTitle().contains(query) || book.getAuthor().contains(query))
+                .collect(Collectors.toList());
+    }
+
+    public void add(Book book) {
+        books.add(book);
+    }
+
+    public void remove(Book book) {
+        books.remove(book);
+    }
+
+    public List<Book> findAll() {
+        return new ArrayList<>(books);
+    }
 }
