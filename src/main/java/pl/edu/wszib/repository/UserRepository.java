@@ -3,6 +3,7 @@ package pl.edu.wszib.repository;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import pl.edu.wszib.model.User;
+import pl.edu.wszib.utils.SecurityUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,9 +12,13 @@ import java.util.Optional;
 @NoArgsConstructor
 public class UserRepository {
     private final List<User> users = new ArrayList<>();
-    public Optional<User> findByUsername(String username) {
+    public void initializeData() {
+        add(new User("admin", SecurityUtils.hashPasswordWithSeed("haslo123"), "ADMIN"));
+        add(new User("user", SecurityUtils.hashPasswordWithSeed("haslo"), "USER"));
+    }
+    public Optional<User> findByUsernameAndPassword(String username, String hashedPassword) {
         return users.stream()
-                .filter(user -> user.getUsername().equals(username))
+                .filter(user -> user.getUsername().equals(username) && user.getPasswordHash().equals(hashedPassword))
                 .findFirst();
     }
 
@@ -21,11 +26,4 @@ public class UserRepository {
         users.add(user);
     }
 
-    public void remove(User user) {
-        users.remove(user);
-    }
-
-    public List<User> findAll() {
-        return new ArrayList<>(users);
-    }
 }

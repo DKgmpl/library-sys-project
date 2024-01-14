@@ -1,2 +1,23 @@
-Dziady cz.II,Adam Mickiewicz,123-123-123,true,Dawid,2024-01-13,2024-01-27
-Ogniem i Mieczem,Henryk Sienkiewicz,321-321-321,false,null,null,null
+Dziady cz.II,Adam Mickiewicz,123-123-123,true,Dawid,Kaminski,2023-12-31,2024-01-13
+Ogniem i Mieczem,Henryk Sienkiewicz,321-321-321,false,null,null,null,null
+Władca Pierścieni,J.R.R.Tolkien,221-110-325,false,null,null,null,null
+Hobbit,J.R.R.Tolkien,321-110-221,false,null,null,null,null
+Harry Potter I Kam. Fil.,J.K.Rowling,774-753-269,true,Jan,Kowalski,2023-04-01,2023-04-15
+Gra O Tron,George R.R.Martin,551-310-354,true,Anna,Nowak,2023-03-22,2023-04-05
+1984,George Orwell,451-518-651,false,null,null,null,null
+Zbrodnia I Kara,Fiodor Dostojewski,484-455-411,false,null,null,null,null
+Czysty Kod,Robert C.Martin,323-352-088,false,null,null,null,null
+To,Stephen King,501-182-099,true,Karol,Bąk,2023-03-15,2023-03-29
+Mały Książę,A Saint-Exupéry,601-521-195,false,null,null,null,null
+Achaja Tom1,Andrzej Ziemiański,123-456-789,false,null,null,null,null
+Krew elfów,Andrzej Sapkowski,234-567-890,false,null,null,null,null
+Narrenturm,Andrzej Sapkowski,345-678-901,false,null,null,null,null
+Uniwersum Metro 2033 Piter,Szymun Wroczek,456-789-012,false,null,null,null,null
+Król Bólu,Jakub Ćwiek,567-890-123,false,null,null,null,null
+Krótka Historia Czasu,Stephen Hawking,678-901-234,false,null,null,null,null
+Wszechświat W Skor. Orzecha,Stephen Hawking,789-012-345,false,null,null,null,null
+Siedem Krót. Lekcji Z Fiz.,Carlo Rovelli,890-123-456,false,null,null,null,null
+Kosmos,Carl Sagan,901-234-567,true,Andrzej,Dąb,2023-04-02,2023-04-16
+Czysty Kod,Robert C Martin,112-233-445,false,null,null,null,null
+Algorytmy Ilustr. Przew.,Aditya Bhargava,223-344-556,false,null,null,null,null
+Wzorce Projektowe,Erich Gamma,334-455-667,false,null,null,null,null
