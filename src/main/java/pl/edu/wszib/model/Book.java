@@ -25,7 +25,7 @@ public class Book {
         this.isbn = isbn;
         this.isBorrowed = false; // Domyślnie książka nie jest wypożyczona
         this.borrowerName = null; // Początkowo brak wypożyczającego
-        this.borrowerSurname = null;
+        this.borrowerSurname = null; // Początkowo brak wypożyczającego
         this.borrowDate = null; // Początkowo brak daty wypożyczenia
         this.returnDate = null; // Początkowo brak daty zwrotu
     }

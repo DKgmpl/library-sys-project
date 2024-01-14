@@ -25,11 +25,10 @@ public class LibraryApp {
         User loggedUser = login();
         while (loggedUser == null) {
             try {
-                loggedUser = login();  // Proces logowania użytkownika
+                loggedUser = login();
             } catch (SecurityException e) {
                 System.out.println(e.getMessage());
-                // Możesz dodać tutaj logikę ponownego logowania
-                return;  // Zakończ, jeśli logowanie nie powiedzie się ponownie
+                return;
             }
         }
         boolean exitFlag = false;
@@ -145,19 +144,19 @@ public class LibraryApp {
     private void listAllBooks() {
         List<Book> allBooks = libraryLogic.getAllBooks();
         displayBooks(allBooks);
-        pause(); // Przerwa do czasu, aż użytkownik naciśnie Enter
+        pause();
     }
 
     private void listBorrowedBooks() {
         List<Book> borrowedBooks = libraryLogic.getBorrowedBooks();
         displayBooks(borrowedBooks);
-        pause(); // Przerwa do czasu, aż użytkownik naciśnie Enter
+        pause();
     }
 
     private void listOverdueBooks() {
         List<Book> overdueBooks = libraryLogic.getOverdueBooks();
         displayBooks(overdueBooks);
-        pause(); // Przerwa do czasu, aż użytkownik naciśnie Enter
+        pause();
     }
 
     private void pause() {
